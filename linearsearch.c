@@ -3,8 +3,8 @@
 
 #include <stdio.h>
 
-int linearSearch(int *arr, int size, int x, int *index){            // Called Fuctinon
-    *index = 0;                                                     // Initialize
+int linearSearch(int *arr, int size, int x, int *index){            	// Called Fuctinon
+    *index = 0;                                                     	// Initialize
     for(int i=0; i<size; ++i){
 	    if(*(arr+i)==x) return 1;
 	    ++(*index);                                                 // Incrementing Index as per requirement
