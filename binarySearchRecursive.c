@@ -1,4 +1,4 @@
-// Implementing the Binary Search Algorithm.
+// Implementing the Binary Search(Recursive) Algorithm.
 
 #include <stdio.h>
 #include <stdbool.h>
