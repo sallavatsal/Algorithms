@@ -8,7 +8,7 @@ bool binarySearchRecursive(int *arr, int x, int L, int R){                  // C
     int mid;
     if(L>R) return false;                                                   // Terminating Codition
 
-    mid = ((L + R)/2);                                                        // Calculating the middle term
+    mid = ((L + R)/2);                                                      // Calculating the middle term
     
     if(arr[mid]>x) return binarySearchRecursive(arr, x, L, mid-1);          // Middle term: arr[mid] on right
     else if(arr[mid]<x) return binarySearchRecursive(arr, x, mid+1, R);     // Middle term: arr[mid] on right
@@ -18,7 +18,7 @@ bool binarySearchRecursive(int *arr, int x, int L, int R){                  // C
 
 int main(){
     
-    int x = 12;                                                            // Number to search
+    int x = 12;                                                             // Number to search
     int arr[] = {15, 20, 36, 64, 82, 113, 147, 163, 175};
     int size = sizeof(arr)/sizeof(arr[0]);
 
