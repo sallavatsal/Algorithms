@@ -10,8 +10,8 @@ bool binarySearchRecursive(int *arr, int x, int L, int R){                  // C
 
     mid = ((L + R)/2);                                                      // Calculating the middle term
     
-    if(arr[mid]>x) return binarySearchRecursive(arr, x, L, mid-1);          // Middle term: arr[mid] on right
-    else if(arr[mid]<x) return binarySearchRecursive(arr, x, mid+1, R);     // Middle term: arr[mid] on right
+    if(arr[mid]>x) return binarySearchRecursive(arr, x, L, mid-1);          // Middle term: arr[mid] on right - Delete Upper
+    else if(arr[mid]<x) return binarySearchRecursive(arr, x, mid+1, R);     // Middle term: arr[mid] on left - Delete Lower
     
     else return true;
 }
