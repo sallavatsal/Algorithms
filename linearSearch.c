@@ -4,10 +4,10 @@
 #include <stdio.h>
 
 int linearSearch(int *arr, int size, int x, int *index){            	// Called Fuctinon
-    *index = 0;                                                     	// Initialize
+    *index = 0;                                                     	// Initialize					// c1
     for(int i=0; i<size; ++i){
-	    if(*(arr+i)==x) return 1;
-	    ++(*index);                                                 // Incrementing Index as per requirement
+	    if(*(arr+i)==x) return 1;											// c2
+	    ++(*index);                                                 // Incrementing Index as per requirement	// c2
 	}
 	return -1;
 }
@@ -24,3 +24,9 @@ int main(void) {
 	
 	return -1;
 }
+
+/* Time Complexity
+
+Total = c1 + c2*(n) + c3 -->> O(n)
+
+*/
