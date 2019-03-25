@@ -45,9 +45,22 @@ int main(){
     return 0;
 }
 
-/* Time Complexity
+/* Time Complexity -  Worst Case
    Total = c1 + (c2*(n-1) * c3*(n-k-1)) + c4
    -> c1 + c2*(n-1) * ((n-1) - n*(n-1)/2)                                    // k = 0 to (n-1) Arithmetic progression
    -> c1 + c2*(n-1) * (3n-n2-2)/2                                            // Approximately (Say c2~c3)
+   -> a*n2 - b*n + c -->> O(n^2)
+*/
+
+/* Time Complexity -  Best Case - An already sorted array is inserted. k = 0 is the first and last pass
+    Total = c1 + (c2*(n-1) * c3*(n-k-1)) + c4                                    // k = 0 to (n-1) Arithmetic progression
+    -> c1 + c2 * c3 * (n-1) + c4
+    -> a*n + b -->> O(n)
+*/
+
+/* Time Complexity -  Average Case - An already sorted array is inserted. k = 0 to n/2. Midway is the last pass
+   Total = c1 + (c2*(n-1) * c3*(n-k-1)) + c4
+   -> c1 + c2*(n-1) * ((n-1) - n*(n-1)/4)                                    // k = 0 to (n-1) Arithmetic progression
+   -> c1 + c2*(n-1) * (5n-n2-4)/4                                            // Approximately (Say c2~c3)
    -> a*n2 - b*n + c -->> O(n^2)
 */
