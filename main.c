@@ -2,16 +2,20 @@
 
 #include <stdio.h>
 
+void swap(int* A, int* B){
+    int temp;
+    temp = *A;
+    *A = *B;
+    *B = temp;
+}
+
 void bubbleSort(int* arr, int size){
-    
-    int i, k, temp, flag;                                                   // c1
+    int i, k, flag;                                                         // c1
     for(k=0; k<(size-1); ++k){              // Max Passes: (n-1)            // c2
         flag = 0;
         for(i=0; i<(size-k-1); ++i){                                        // c3
-            if(arr[i+1]<arr[i]){                                            // c3
-                temp = arr[i];
-                arr[i] = arr[i+1];
-                arr[i+1] = temp;
+            if(arr[i+1]<arr[i]){
+                swap(&arr[i+1], &arr[i]);
                 flag = 1;
             }
         }
@@ -43,7 +47,7 @@ int main(){
 
 /* Time Complexity
    Total = c1 + (c2*(n-1) * c3*(n-k-1)) + c4
-   -> c1 + c2*(n-1) * ((n-1) - n*(n-1)/2)                              // k = 0 to (n-1) Arithmetic progression
-   -> c1 + c2*(n-1) * (3n-n2-2)/2                                      // Approximately (Say c2~c3)
+   -> c1 + c2*(n-1) * ((n-1) - n*(n-1)/2)                                    // k = 0 to (n-1) Arithmetic progression
+   -> c1 + c2*(n-1) * (3n-n2-2)/2                                            // Approximately (Say c2~c3)
    -> a*n2 - b*n + c -->> O(n^2)
 */
