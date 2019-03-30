@@ -1,4 +1,4 @@
-// Implementing the Bubble Sort Algorithm.
+// Implementing the Insertion Sort Algorithm.
 
 #include <stdio.h>
 
